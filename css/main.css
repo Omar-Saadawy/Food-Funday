@@ -1,0 +1,1202 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    height: 5000px;
+    background-color: rgb(8, 8, 37);
+}
+
+.orange {
+    --main: #e75b1e;
+    --main-opacity: rgba(231, 91, 30, .7)
+}
+
+.blue {
+    --main: #1e69b8;
+    --main-opacity: rgba(30, 105, 184, .7)
+}
+
+.green {
+    --main: #8dc635;
+    --main-opacity: rgba(141, 198, 53, .7)
+}
+
+.yellow {
+    --main: #fdcb03;
+    --main-opacity: rgba(253, 203, 3, .7)
+}
+
+/* #8dc635 #fdcb03 #1e69b8 #e75b1e*/
+/* :root {
+    --main: #e75b1e
+} */
+
+/* start navbar */
+body>.navbar {
+    transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+}
+
+.fixed {
+    background-color: #262626;
+    transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    padding: 10px 0 !important;
+}
+
+/* brand */
+.navbar-brand {
+    cursor: pointer;
+}
+
+.navbar-brand img {
+    width: 200px;
+}
+
+button.navbar-toggler {
+    border: none;
+    font-size: 30px;
+    color: var(--main) !important;
+}
+
+button.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+a.nav-link {
+    font-size: 15px;
+    font-weight: 600;
+    position: relative;
+    transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+}
+
+a.nav-link.active {
+    color: var(--main) !important;
+    font-weight: 600;
+}
+
+a.nav-link:hover {
+    color: var(--main) !important;
+}
+
+a.nav-link.active::after {
+    content: "";
+    background-color: var(--main);
+    width: 100%;
+}
+
+a.nav-link:hover::after {
+    content: "";
+    background-color: var(--main);
+    width: 100%;
+}
+
+a.nav-link::after {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    height: 3px;
+    width: 0%;
+    bottom: 0;
+    left: 0;
+    transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+
+/*Start Background Section*/
+
+.background {
+    width: 100%;
+    min-height: 100vh;
+    background: url(../food-funday-images/home001.jpg) no-repeat fixed;
+    background-size: cover
+}
+
+.background .main .sticky-text {
+    font-size: 4rem;
+}
+
+.background .main .sticky-text .static-text {
+    color: #fff;
+
+}
+
+.background .main .sticky-text .dynamic-text {
+    height: 110px;
+    line-height: 100px;
+    overflow: hidden;
+}
+
+.background .main .sticky-text .dynamic-text li {
+    color: var(--main);
+    position: relative;
+    top: 0;
+    animation: slide 7.5s steps(3) infinite;
+    -webkit-animation: slide 7.5s steps(3) infinite;
+}
+
+@keyframes slide {
+    100% {
+        top: -360px;
+    }
+}
+
+.background .main .sticky-text .dynamic-text span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 120%;
+    width: 100%;
+    background-color: rgba(4, 4, 44, 0.9);
+    border-left: 2px solid var(--main);
+    animation: type 2.5s steps(10) infinite;
+    -webkit-animation: type 2.5s steps(10) infinite;
+}
+
+@keyframes type {
+    100% {
+        left: 100%;
+        margin: 0 -35px 0 35px;
+        width: 0;
+
+    }
+}
+
+/*Start Media*/
+@media(max-width: 600px) {
+    .background .main .sticky-text .dynamic-text {
+        height: 55px;
+        line-height: 56px;
+        overflow: hidden;
+    }
+
+    .background .main .sticky-text {
+        font-size: 2rem;
+    }
+
+    @keyframes slide {
+        100% {
+            top: -180px;
+        }
+    }
+
+    @keyframes type {
+        100% {
+            left: 100%;
+            margin: 0 -30px 0 30px;
+            width: 0;
+
+        }
+    }
+}
+
+/*End Media*/
+
+.background .main h2 {
+    color: var(--main);
+    font-size: 4rem;
+    font-family: "tangerine";
+}
+
+.background .main p {
+    font-size: 19px;
+    color: #eee;
+}
+
+.background .main>button {
+    background-color: var(--main);
+    color: #fff;
+    padding: 12px 25px;
+    border: 3px solid var(--main);
+    font-size: 20px;
+    border-bottom: 5px solid var(--main);
+    transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+}
+
+.background .main>button:hover {
+    background-color: rgba(255, 255, 128, 0);
+    border-bottom: 5px solid var(--main)
+}
+
+.background .main>div .animation {
+    width: 65px;
+    height: 120px;
+    border: 1px solid #eee;
+    border-radius: 50px 50px;
+    border: 2px solid #fff;
+    cursor: pointer;
+    -webkit-border-radius: 50px 50px;
+    -moz-border-radius: 50px 50px;
+    -ms-border-radius: 50px 50px;
+    -o-border-radius: 50px 50px;
+}
+
+/* start .circle animation */
+
+.background .main>div .animation>.circle {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    left: 20px;
+    top: 20px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    animation: circling 1.5s infinite linear;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    -webkit-animation: circling 1.5s infinite linear;
+}
+
+@keyframes circling {
+    from {
+        top: 20px;
+        opacity: 1
+    }
+
+    to {
+        top: 40px;
+        opacity: .2
+    }
+}
+
+/* End .circle animation */
+
+/*End Background Section*/
+
+/* start change color */
+
+.colorBox {
+    position: fixed;
+    top: 100px;
+    right: 0px;
+    z-index: 9999;
+}
+
+.box {
+    position: relative;
+    top: 72px;
+    width: 40px;
+    height: 40px;
+    background-color: #787878;
+    cursor: pointer;
+    border-radius: 3px;
+    right: 40px;
+    padding-left: 4px;
+    transition: all 1.5s ease-in-out;
+    -webkit-transition: all 1.5s ease-in-out;
+    -moz-transition: all 1.5s ease-in-out;
+    -ms-transition: all 1.5s ease-in-out;
+    -o-transition: all 1.5s ease-in-out;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+.sj {
+    right: -100px;
+    /* right: -90px */
+}
+
+.box i {
+    position: relative;
+    top: 4px;
+    color: #eee;
+    z-index: 10;
+}
+
+.box i:hover {
+    color: var(--main);
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+}
+
+.color {
+    position: relative;
+    background-color: #3c3c3c;
+    right: 0;
+    float: right;
+    width: 140px;
+    height: 100px;
+    color: #fff;
+    padding-left: 25px;
+    padding-top: 12px;
+    transition: all 1.5s ease-in-out;
+    -webkit-transition: all 1.5s ease-in-out;
+    -moz-transition: all 1.5s ease-in-out;
+    -ms-transition: all 1.5s ease-in-out;
+    -o-transition: all 1.5s ease-in-out;
+}
+
+.js {
+    right: -140px
+}
+
+.colorBox .color ul li {
+    width: 25px;
+    height: 40px;
+    background-color: var(--main);
+    display: inline-block;
+    cursor: pointer
+}
+
+/* end change color */
+
+/* start scroll button */
+.btn {
+    background-color: #b3b3b3;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .25s linear .25s;
+
+}
+
+.btn:hover {
+    background-color: #3c3c3c;
+}
+
+.btn i {
+    color: #fff;
+}
+
+/* End scroll button */
+
+/* Start About Us Section */
+
+.about {
+    background-color: #e6e6e6;
+    height: auto
+}
+
+.about h2 {
+    font-size: 50px;
+    color: var(--main);
+}
+
+.about h3 {
+    font-size: 18px;
+    font-weight: 550;
+    letter-spacing: .01px
+}
+
+.about .lead {
+    color: olive;
+    font-size: 13.5px;
+    line-height: 26px
+}
+
+.photo {
+    margin-bottom: 100px;
+}
+
+.photo img {
+    border: 10px solid #fff;
+}
+
+.about .position-relative {
+    color: var(--main);
+    z-index: 1000;
+    top: -110px;
+    left: 150px;
+}
+
+/* End About Us Section */
+
+.today {
+    background: url(../food-funday-images/special_menu_bg.jpg) no-repeat fixed;
+    background-size: cover;
+    height: auto;
+}
+
+.today .rgb {
+    background-color: rgba(2, 2, 2, .7);
+    width: 100%;
+    height: auto
+}
+
+.special .today h2 {
+    color: var(--main);
+    font-size: 50px;
+}
+
+.special .today p {
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 1px;
+    padding: 0px 40px;
+    font-weight: 600
+}
+
+/* Swiping */
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid white;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-slide .rgba {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-opacity);
+    justify-content: center;
+    align-items: end;
+    display: flex;
+    opacity: 0;
+    cursor: pointer;
+    transition: all .25s ease-out .2s;
+    -webkit-transition: all .25s ease-out .2s;
+    -moz-transition: all .25s ease-out .2s;
+    -ms-transition: all .25s ease-out .2s;
+    -o-transition: all .25s ease-out .2s;
+}
+
+.swiper-slide:hover .rgba {
+    opacity: 1;
+}
+
+.swiper-slide .rgba .dish {
+    color: white;
+    width: 80%;
+    border: 2px solid white;
+    padding: 5px;
+}
+
+.swiper-slide .rgba .dish p {
+    font-size: 14px;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--main) !important;
+}
+
+.swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+    opacity: 1;
+}
+
+/* end Today's Special section */
+
+/* start section our menu */
+
+.menu {
+    height: auto;
+    /* height: 1000px; */
+    background-color: #fff;
+}
+
+.menu .container .h1 {
+    font-family: "tangerine";
+    font-weight: 900;
+    padding-bottom: 25px;
+    color: var(--main)
+}
+
+.menu .container .lead {
+    font-size: 19px;
+    padding-bottom: 15px;
+    font-weight: 300;
+    color: #6b6b6b
+}
+
+.grey {
+    width: 100%;
+    /* height: 80%; */
+    background: #f5f5f5;
+    box-shadow: -16px -2px 2px #f5f5f5,
+        16px 2px 2px #f5f5f5
+}
+
+.grey .tab {
+    height: auto;
+    border-bottom: #6b6b6b solid 1px;
+    cursor: pointer;
+}
+
+.grey .tab.active {
+    background-color: var(--main);
+    border-bottom: var(--main) solid 1px;
+}
+
+.container .grey .row .model .media-body {
+    padding: 1px 10px 1px 20px;
+}
+
+.container .grey .row .model .price {
+    padding: 0px 27.5px;
+}
+
+/* start media object */
+
+.grey .med {
+    margin-bottom: 20px
+}
+
+.obj1, .obj2, .obj3 {
+    position: relative;
+    top: -50px;
+    left: 15px;
+    margin-bottom: 15px
+}
+
+.obj1 img, .obj2 img, .obj3 img {
+    border: #fff solid 7px
+}
+
+.menu .container p {
+    font-size: 16px;
+    font-weight: 300;
+    color: #6b6b6b
+}
+
+.price {
+    width: 90px;
+    height: 90px;
+    border: #e75b1e solid 1px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 90px;
+    font-weight: 600;
+    font-size: 18px
+}
+
+/* for active:menu container grey row div */
+/* end media object */
+/* end section our menu */
+
+
+/* start section our team */
+.ourTeam {
+    width: 100%;
+    height: auto;
+    background: url(../food-funday-images/team_bg.jpg) no-repeat fixed;
+    background-size: cover
+}
+
+.shadow {
+    background-color: rgba(2, 2, 2, .5);
+    width: 100%;
+}
+
+.shadow .container .h1 {
+    color: var(--main);
+    /* font-family: "tangerine"; */
+    font-weight: 700;
+}
+
+.ourTeam .p-title {
+    color: #e6e6e6;
+    font-size: 18px
+}
+
+.ourTeam .card {
+    cursor: pointer
+}
+
+.ourTeam .card .rgba {
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+}
+
+.ourTeam .card-body {
+    background-color: #fff;
+    z-index: 1020;
+}
+
+.ourTeam .card-body p {
+    font-size: 14px;
+    border-bottom: 1px solid #000;
+}
+
+.ourTeam .card-body .icons div {
+    border: 1px solid #0000009f;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.ourTeam .card:hover .rgba {
+    background-color: rgba(0, 0, 0, .6);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+}
+
+.ourTeam .card:hover .card-body {
+    background-color: var(--main);
+    color: white;
+    transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+}
+
+.ourTeam .card:hover .card-body p {
+    color: white;
+    border-bottom: 1px solid #fff;
+    transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+}
+
+.ourTeam .card:hover .card-body .icons div {
+    background-color: #fff;
+    color: #000;
+}
+
+/* start section our team */
+
+/* start section gallery */
+
+.gallery {
+    background-color: #e6e6e6;
+}
+
+.gallery .h1 {
+    color: var(--main);
+    font-weight: 700;
+}
+
+.gallery .container .row .col-12 {
+    padding: 0;
+    border: #fff solid 3px;
+    cursor: pointer;
+    height: 350px;
+}
+
+.gallery .container .row .col-12 img {
+    height: 100%;
+    object-fit: cover;
+    min-width: 100%;
+}
+
+.gallery .container .row .rgba {
+    background-color: var(--main-opacity);
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+}
+
+.gallery .container .row .col-12:hover .rgba {
+    opacity: 1;
+}
+
+.gallery i {
+    z-index: 5;
+    color: #fff;
+    /* position: relative;
+    left: 46%;
+    top: 160px; 
+    display: none; */
+}
+
+.modal {
+    z-index: 10000;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.modal.appear {
+    display: flex;
+}
+
+.modal .close {
+    border: 2px solid #fff;
+    padding: 5px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: rgba(0, 0, 0, .7);
+    cursor: pointer;
+}
+
+.modal .back {
+    max-height: 500px;
+    /* max-width: 500px; */
+}
+
+.modal .back img {
+    height: 100%;
+    max-width: 100%;
+}
+
+.modal .caption {
+    background-color: rgba(0, 0, 0, .6);
+    bottom: 34px;
+    position: relative;
+    padding: 5px;
+    color: #fff;
+}
+
+/* end section gallery */
+
+
+/* start section blog */
+
+.ourBlog {
+    background-image: url(../food-funday-images/blog_bg.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: auto
+}
+
+.rgba {
+    background-color: rgba(2, 2, 2, .5);
+    width: 100%;
+}
+
+.blog .ourBlog .h1 {
+    color: #fff;
+}
+
+.blog .card {
+    height: 250px;
+    background-color: rgba(0, 0, 0, .7);
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+}
+
+.blog .card .card-img {
+    width: 50%;
+    height: 100%;
+    background-size: cover;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+}
+
+.blog .card .rgb {
+    position: absolute;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    align-items: center;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .1);
+    opacity: 0;
+}
+
+.blog .card .rgb:hover {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, .7);
+}
+
+.blog .card .rgb svg {
+    border-radius: 50%;
+    color: #fff;
+    border: 1px solid #eee;
+    font-weight: 200;
+    padding: 18px;
+    width: 20px;
+    height: 20px;
+    transform: rotate(90deg);
+    cursor: pointer;
+    opacity: 1;
+
+}
+
+.blog .card .rgb svg:hover {
+    color: var(--main);
+    border-color: var(--main);
+    opacity: 1;
+}
+
+.blog .card .card-img-overlay {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+}
+
+.blog .card .card-img-overlay p {
+    font-size: 22px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.blog .card .card-img-overlay h6 {
+    font-size: 12px;
+    color: #ccc;
+}
+
+.butblog {
+    margin: auto;
+    background-color: var(--main);
+    color: #fff;
+    padding: 12px 25px;
+    border: 3px solid var(--main);
+    font-size: 20px;
+    border-bottom: 5px solid var(--main);
+    text-transform: uppercase;
+}
+
+.butblog:hover {
+    background-color: rgba(255, 255, 128, 0);
+    border-bottom: 5px solid var(--main);
+    transition: all .5s ease-in-out;
+}
+
+/* end section blog */
+
+/* start section pricing*/
+.pricing {
+    background-image: url(../food-funday-images/full-bg.png);
+}
+
+.pricing div h2 {
+    color: var(--main);
+    font-weight: 700;
+}
+
+.pricing div p {
+    font-size: 20px;
+    padding-bottom: 15px;
+    color: #5f5f5f
+}
+
+.pricing .card .card-body:first-child {
+    padding: 0px;
+    background-color: var(--main);
+}
+
+.pricing .container .row .card-body h2 {
+    color: #fff;
+}
+
+.pricing .container .row .card-body h3 {
+    width: 100%;
+    background-color: #e6e6e6;
+    color: #000;
+    margin: auto;
+    font-weight: 700;
+}
+
+.pricing .container .row .card-body h3 span {
+    color: var(--main)
+}
+
+.pricing .container .row .card-body button {
+    background-color: var(--main);
+    color: #fff;
+    border: 3px solid var(--main);
+    font-size: 20px;
+    border-bottom: 5px solid var(--main);
+    width: 100%;
+}
+
+.pricing .container .row .card-body button:hover {
+    background-color: rgba(255, 255, 128, 0);
+    border-bottom: 5px solid var(--main);
+    color: #000;
+    transition: all .5s ease-in .25s;
+    -webkit-transition: all .5s ease-in .25s;
+    -moz-transition: all .5s ease-in .25s;
+    -ms-transition: all .5s ease-in .25s;
+    -o-transition: all .5s ease-in .25s;
+}
+
+.pricing .card:hover {
+    transform: translateY(-15px);
+    transition: all .5s ease-in-out
+}
+
+/* end section pricing*/
+
+/* start section form */
+section.reservation {
+    background-color: #fff;
+}
+
+div.reservation .h1 {
+    color: var(--main);
+}
+
+form .row input,
+form .row select {
+    height: 50px;
+    border: #5f5f5f dotted 1px;
+    background-color: #e6e6e6;
+}
+
+form .row input::placeholder,
+form .row select::placeholder,
+form .row select {
+    color: rgb(133, 133, 133);
+}
+
+.reservation button {
+    background-color: var(--main);
+    color: #fff;
+    border: 3px solid var(--main);
+    font-size: 20px;
+    border-bottom: 5px solid var(--main);
+}
+
+.reservation button:hover {
+    background-color: rgba(255, 255, 128, 0);
+    border-bottom: 5px solid var(--main);
+    color: #000;
+    transition: all .5s ease-in .25s
+}
+
+/* end section form */
+
+/* Start letter section */
+
+.newLetters {
+    width: 100%;
+    height: auto;
+    background: url(../food-funday-images/newsletter-bg.jpg) no-repeat fixed;
+    background-size: cover
+}
+
+.newLetters .new {
+    background-color: rgba(2, 2, 2, .5);
+    width: 100%;
+    height: auto;
+}
+
+.letter .new h2 {
+    color: #fff;
+}
+
+.letter .new p {
+    color: #fff;
+}
+
+.letter .new .container .row form .form-control {
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+}
+
+.letter .new .container .row form button {
+    width: 50px;
+    background-color: var(--main);
+    font-size: 24px;
+}
+
+.letter .new .container .row form button svg {
+    color: #fff;
+}
+
+.letter .new .container .row form button:hover {
+    background-color: #fff;
+}
+
+.letter .new .container .row form button:hover svg {
+    color: #000;
+
+}
+
+/*End letter section */
+
+/* start section food funday */
+.fun {
+    background: url(../food-funday-images/footer_background.jpg) no-repeat;
+    width: 100%;
+    background-size: cover;
+}
+
+.funday {
+    background-color: rgba(2, 2, 2, .7);
+    width: 100%;
+}
+
+.funday .container .row .col-12 {
+    color: #e6e6e6;
+}
+
+.funday .container .row .col-12 h5 {
+    color: var(--main);
+}
+
+.funday .container .row .col-12 svg {
+    font-size: 20px;
+    padding: 4px;
+}
+
+.funday .container .row .col-12.au svg {
+    cursor: pointer;
+}
+
+.funday .container .row .col-12.au svg:hover {
+    color: var(--main);
+}
+
+.funday .container .row .col-12.cu svg {
+    color: var(--main);
+}
+
+.funday .container .row .col-12 div.transform {
+    transform: translate(0);
+    -webkit-transform: translate(0);
+    -moz-transform: translate(0);
+    -ms-transform: translate(0);
+    -o-transform: translate(0);
+    transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+
+}
+
+.funday .container .row .col-12 div.transform:hover {
+    transform: translateX(20px);
+    -webkit-transform: translateX(20px);
+    -moz-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    -o-transform: translateX(20px);
+    transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+}
+
+.funday .container .row .col-12 div a {
+    text-decoration: none;
+    color: #e6e6e6;
+}
+
+.funday .container .row .col-12 div a:hover {
+    color: var(--main);
+}
+
+.funday .container .row .col-12 span {
+    color: #5f5f5f;
+    font-size: 14px;
+}
+
+.funday .container .row p {
+    line-height: 15px;
+}
+
+/* end section food funday */
+/* start section footer */
+.footer {
+    height: auto;
+    background-color: var(--main);
+    color: #fff;
+    border-top: #fff dotted 2px;
+}
+
+.footer div a {
+    color: #000;
+    text-decoration: none
+}
+
+.footer div a:hover {
+    color: #fff;
+}
+
+/* end section footer */
